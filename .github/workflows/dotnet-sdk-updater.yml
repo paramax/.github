@@ -1,9 +1,12 @@
 name: .NET SDK updater
 
 on:
-  schedule:
-    - cron: "0 12 * * 1-5"
-  workflow_dispatch:
+  workflow_call:
+    secrets:
+      BOT_APP_ID:
+        required: true
+      BOT_APP_PRIVATE_KEY:
+        required: true
 
 jobs:
   update:
