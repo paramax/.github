@@ -41,7 +41,7 @@ jobs:
       - name: Create pull request
         if: steps.sdk.outputs.updated == 'true' && steps.sdk.outputs.dry-run == 'false'
         id: cpr
-        uses: peter-evans/create-pull-request@v4.2.2
+        uses: peter-evans/create-pull-request@v4.2.3
         with:
           token: ${{ steps.generate_token.outputs.token }}
           author: pmxdev[bot] <100628556+pmxdev[bot]@users.noreply.github.com>
